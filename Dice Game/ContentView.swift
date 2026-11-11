@@ -9,6 +9,10 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var randomValue = 0
+    
+    
     var body: some View {
         VStack {
             Text("Dice Roll")

@@ -11,6 +11,7 @@ import SwiftUI
 struct ContentView: View {
     
     @State private var randomValue = 0
+    @State private var rotation = 0.0
     
     
     var body: some View {

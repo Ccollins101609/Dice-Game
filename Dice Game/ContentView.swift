@@ -18,6 +18,8 @@ struct ContentView: View {
             Text("Dice Roll")
                 .font(.largeTitle)
             Image("pips \(randomValue)")
+                .resizable()
+                .frame(width: 200, height: 200)
 
         }
     }

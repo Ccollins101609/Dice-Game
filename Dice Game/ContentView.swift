@@ -33,6 +33,15 @@ struct ContentView: View {
             
         }
     }
+    
+    func chooseRandom(times: Int) {
+        if times > 0 {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                randomValue = Int.random(in: 1...6)
+                chooseRandom(times: times - 1)
+            }
+        }
+    }
 }
 
 #Preview {

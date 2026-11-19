@@ -17,6 +17,7 @@ struct ContentView: View {
         VStack {
             Text("Dice Roll")
                 .font(.largeTitle)
+            Image("pips \(randomValue)")
 
         }
     }

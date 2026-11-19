@@ -21,7 +21,12 @@ struct ContentView: View {
             Image("pips \(randomValue)")
                 .resizable()
                 .frame(width: 200, height: 200)
-
+                .rotationEffect(.degrees(rotation))
+                .rotation3DEffect(
+                    .degrees(rotation),
+                    axis: (x: 1, y: 1, z: 0)
+                )
+            
         }
     }
 }

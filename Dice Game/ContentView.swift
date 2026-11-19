@@ -26,11 +26,18 @@ struct ContentView: View {
                     .degrees(rotation),
                     axis: (x: 1, y: 1, z: 0)
                 )
-                .padding()
                 .onTapGesture {
                     randomValue = Int.random(in: 1...6)
+                    
+                    withAnimation(
+                        .interpolatingSpring(
+                            stiffness: 10,
+                            damping: 2
+                        )
+                    ) {
+                        rotation += 360
+                    }
                 }
-            
         }
     }
     
